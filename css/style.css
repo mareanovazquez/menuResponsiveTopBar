@@ -45,7 +45,7 @@ header .navBar .dropdown-menu {
     box-shadow: 10px 10px 0px 0px rgba(25,50,60,1);
 }
 
-.navbar .dropdown-toggle::after {
+/* .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -53,7 +53,7 @@ header .navBar .dropdown-menu {
     vertical-align: middle;
     margin-left: 8px;
 }
-
+ */
 .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
@@ -65,21 +65,26 @@ header .navBar .dropdown-menu {
 
 header .navBar {
     background-color: #C0DBEA;
+    position: fixed;
+    width: 100%;
 }
 
 
 header .navbar-nav .nav-link:hover {
     color: #BA90C6;
+    
 }      
+
+header .navbar-nav .dropdown-menu a:hover {
+    background-color: #FDF4F5;
+    border-bottom: 2px solid #BA90C6;
+    width: 10%;
+    
+}
 
 /* Clase para el comportamiento sticky con transición */
 
-header .sticky-nav {
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    animation: slideDown 0.5s ease;
-}
+
 
 @media (min-width: 992px) {
     header .topBar {
@@ -88,12 +93,20 @@ header .sticky-nav {
 
     header .navBar {
         background-color: #C0DBEA;
+        position: static;
 
     }
 
     header .navBar .brand {
         font-family: 'Kanit', sans-serif;
         color: #172A3A;
+    }
+
+    header .sticky-nav {
+        top: 0px;
+        position: fixed;
+        width: 100%;
+        animation: slideDown 0.5s ease;
     }
 
     .navbar .nav-item .dropdown-menu {
