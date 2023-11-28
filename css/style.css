@@ -1,0 +1,125 @@
+/* FONTS
+font-family: 'Poppins', 'Courier New', Courier, monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Playfair Display', serif;
+ */
+
+/* COLORS
+ BACKGROUND: FDF4F5
+ FUENTE PRINCIPAL #19323C 
+ FUENTE MENU #172A3A*/
+
+body {
+    font-family: 'Poppins', 'Courier New', Courier, monospace;
+    background-color: #FDF4F5;
+    color: #19323C;
+    height: 200vh;
+}
+
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn-rrss a {
+    color: #19323C;
+}
+
+.btn-rrss a:hover {
+    color: #BA90C6;
+}
+/* .btn-sm-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-weight: normal;
+} */
+
+header .navBar .dropdown-menu {
+    background-color: #FDF4F5;
+    border: none;
+    box-shadow: 10px 10px 0px 0px rgba(25,50,60,1);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+}
+
+header .navBar {
+    background-color: #C0DBEA;
+}
+
+
+header .navbar-nav .nav-link:hover {
+    color: #BA90C6;
+}      
+
+/* Clase para el comportamiento sticky con transición */
+
+header .sticky-nav {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    animation: slideDown 0.5s ease;
+}
+
+@media (min-width: 992px) {
+    header .topBar {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    header .navBar {
+        background-color: #C0DBEA;
+
+    }
+
+    header .navBar .brand {
+        font-family: 'Kanit', sans-serif;
+        color: #172A3A;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+    /* Keyframes para la animación de deslizamiento */
+    @keyframes slideDown {
+        from {
+            top: -50px; /* Altura desde donde comienza el deslizamiento */
+        }
+        to {
+            top: 0px; /* Altura final después del deslizamiento */
+        }
+    }
